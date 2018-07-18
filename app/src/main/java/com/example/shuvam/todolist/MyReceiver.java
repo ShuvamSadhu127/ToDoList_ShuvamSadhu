@@ -11,12 +11,15 @@ import android.util.Log;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 
 public class MyReceiver extends BroadcastReceiver {
     public static boolean CURRENT= true;
+    TaskAdapter adapter;
+
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -62,6 +65,8 @@ public class MyReceiver extends BroadcastReceiver {
 
 
                     database.insert(Contract.todo.TABLE_NAME, null, contentValues);
+                    adapter.notifyDataSetChanged();
+
 
                 } // bundle is null
 
