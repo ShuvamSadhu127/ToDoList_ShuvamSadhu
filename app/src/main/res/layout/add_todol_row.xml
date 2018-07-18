@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editTextTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Task"/>
+
+    <EditText
+        android:id="@+id/editTextTaskSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTask"
+        android:hint="Enter Task summary"/>
+    <EditText
+        android:id="@+id/editTextTaskDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTaskSummary"
+        android:hint="Enter Task Date"
+        android:onClick="setDate"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/editTextTaskTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTaskDate"
+        android:hint="Enter Task time"
+        android:onClick="setTime"
+        android:focusable="false"/>
+
+
+</RelativeLayout>
